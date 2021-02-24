@@ -1034,7 +1034,7 @@ export default {
     }
 
     let hasIdO = false;
-    if (rootEle && rootEle.firstElementChild && rootEle.firstElementChild.id === '0') {
+    if (rootEle && rootEle.firstElementChild) {
       hasIdO = true;
     }
 
