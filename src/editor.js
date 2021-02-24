@@ -11,6 +11,7 @@ export default class Editor {
       container,
       cellCreatedFunc,
       valueChangeFunc,
+      editMode = true,
     } = props;
 
 
@@ -25,7 +26,7 @@ export default class Editor {
 
     // Disables the built-in context menu
     mxEvent.disableContextMenu(containerEle); // eslint-disable-line
-    mxVertexHandler.prototype.rotationEnabled = true; // eslint-disable-line
+    mxVertexHandler.prototype.rotationEnabled = editMode; // eslint-disable-line
 
     this.containerEle = containerEle;
 
