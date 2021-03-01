@@ -352,4 +352,14 @@ export default class Editor {
   stopPanning() {
     return util.stopPanning(this.graph);
   }
+
+  highlightCell(graph, cell, color) {
+    if(graph) {
+      if (this.highlight) {
+        this.highlight.hide();
+      }
+      this.highlight = new mxCellHighlight(graph, color, 2);
+      this.highlight.highlight(graph.view.getState(cell));
+    }
+  }
 }
